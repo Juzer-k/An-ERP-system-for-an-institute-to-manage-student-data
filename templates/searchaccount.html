@@ -1,0 +1,41 @@
+{% extends 'design.html'%}
+
+{% block content %}
+<div class="container-fuild">
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="row my-3 fw-bold">
+        <div class="col-3 form-group">
+          <label>From Date</label>
+          <input type="date" name="fdate" />
+        </div>
+
+        <div class="col-3 form-group">
+          <label>To Date</label>
+          <input type="date" name="tdate" />
+        </div>
+        <div class="col-3 form-group">
+            Option<select name="ch">
+                <option>Select Option</option>
+                <option>Paid First</option>
+                <option>Paid Second</option>
+                <option>Dues</option>
+            </select>
+        </div>
+        <div class="col-3 form-group">
+         <input type="submit" value="Search" />
+          </div>
+    </div>
+
+    {% comment %} FROM_DATE<input type="date" name="fdate" /><br>
+    TO_DATE<input type="date" name="tdate" /><br>
+    OPTION<select name="ch">
+        <option>paid_first</option>
+        <option>paid_second</option>
+        <option>dues</option>
+    </select>
+    <input type="submit" value="Search" /> {% endcomment %}
+</form>
+</div>
+{% endblock %}

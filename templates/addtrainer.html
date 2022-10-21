@@ -1,0 +1,46 @@
+{% extends 'design.html'%}
+
+        {% block content%}
+        <form action="" class="d-flex flex-column py-3 " method="post">
+        {% csrf_token %}
+
+        <div class="row my-2">
+            <div class="col-6 form-group">
+              <label>Trainer Name</label>
+              <input type="text" class="form-control" name="tname" placeholder="Name" required/>
+            </div>
+ 
+            <div class="col-6 form-group">
+              <label >Mobile</label>
+              <input type="number" class="form-control" name="mobile"  placeholder="Mobile" required/>
+            </div>
+        </div>
+
+        <div class="row my-4">
+           <div class="col-6 form-group">
+             <label>Email Address</label>
+             <input type="email" class="form-control" name="email"  placeholder="Email Address" required/>
+           </div>
+
+           <div class="col-6 form-group">
+            <label>Qualification</label>
+            <input type="text" class="form-control" name="qualification"  placeholder="Qualification" required/>
+          </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-6 form-group">
+                <label>Subject</label>
+                <input type="text" class="form-control" name="subject"  placeholder="Subject" required/>
+            </div>
+
+            <div class="col-6 form-group">
+                <label>Timings</label>
+                <input type="time" class="form-control" name="timings" required/>
+            </div>
+        </div>
+ 
+        <button class="btn col-4 btn-dark my-2" type="submit" value="">Add Trainer</button>
+    </form>
+    {% endblock %}
+ 
